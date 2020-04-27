@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:1201px;
+  width:1193px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -16,7 +16,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:1186px;
+  width:1178px;
   height:195px;
   background:-webkit-linear-gradient(350deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 153, 1) 100%, rgba(0, 255, 153, 1) 100%);
   background:-moz-linear-gradient(100deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 153, 1) 100%, rgba(0, 255, 153, 1) 100%);
@@ -34,14 +34,14 @@
   position:absolute;
   left:15px;
   top:0px;
-  width:1186px;
+  width:1178px;
   height:195px;
 }
 #u23 {
   position:absolute;
   left:2px;
   top:90px;
-  width:1182px;
+  width:1174px;
   visibility:hidden;
   word-wrap:break-word;
 }
