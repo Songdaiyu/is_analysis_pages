@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(53, 49, 49);
+
+        }
+
+        .container {
+            width: 700px;
+            height: 300px;
+            /* border: 1px solid #000; */
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        .form {
+            width: 440px;
+            height: 70%;
+            margin: 10px auto;
+            /* border: 1px solid #000; */
+
+        }
+
+        .user {
+            margin-top: 20px;
+        }
+
+        .form input {
+            width: 78%;
+            height: 39px;
+            outline-style: none;
+            border: 0.5px solid #ccc;
+            border-radius: 3px;
+
+        }
+
+        .form input:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+        }
+
+        label {
+            font-size: 14px;
+            font-family: "Microsoft soft";
+            color: rgb(235, 229, 229);
+        }
+
+        .password label {
+            /* display: block; */
+            margin-left: 10px;
+        }
+
+        .login {
+            width: 75px;
+            height: 42px;
+            background-color: rgb(76, 167, 57);
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .btn {
+            width: 200px;
+            height: 100px;
+            margin: 30px auto;
+        }
+
+        .register {
+            margin-left: 40px;
+            background-color: rgb(145, 139, 139);
+        }
+
+        .sown1 {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown1 12s ease-out 0s infinite;
+        }
+
+        .sown2 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown2 12s ease-out 2s infinite;
+        }
+
+        .sown3 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown3 12s ease-out 7.9s infinite;
+        }
+
+        .sown4 {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown4 12s ease-out 0.5s infinite;
+        }
+
+        .sown5 {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown1 12s ease-out 10.4s infinite;
+        }
+
+        .sown6 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown2 50s ease-out 7.5s infinite;
+        }
+
+        .sown7 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown3 12s ease-out 3.2s infinite;
+        }
+
+        .sown8 {
+            width: 6px;
+            height:6px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown4 12s ease-out 4.5s infinite;
+        }
+
+        .sown9 {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown1 12s ease-out 20s infinite;
+        }
+
+        .sown10 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown2 12s ease-out 5.4s infinite;
+        }
+
+        .sown11 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown3 12s ease-out 3.8s infinite;
+        }
+
+        .sown12 {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown4 12s ease-out 4s infinite;
+        }
+
+        .sown13 {
+            width: 13px;
+            height: 13px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown1 12s ease-in 13.6s infinite;
+        }
+
+        .sown14 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown2 12s ease-in 6.8s infinite;
+        }
+
+        .sown15 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown3 12s ease-out 6.2s infinite;
+        }
+
+        .sown16 {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown4 20s ease-in 14.1s infinite;
+        }
+
+        .sown17 {
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown5 20s ease-out 3.6s infinite;
+        }
+
+        .sown18 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown6 20s ease-out 8s infinite;
+        }
+
+        .sown19 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown7 20s ease-in 7s infinite;
+        }
+
+        .sown20 {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown11 20s ease-in 11s infinite;
+        }
+
+        .sown21 {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown12 12s ease-out 5s infinite;
+        }
+
+        .sown22 {
+            width: 12px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown13 30s ease-in 10.6s infinite;
+        }
+
+        .sown16 {
+            width: 5px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown14 25s ease-in 6.8s infinite;
+        }
+
+        .sown17 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown15 20s ease-out 0.6s infinite;
+        }
+
+        .sown18 {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown6 20s ease-in 5s infinite;
+        }
+
+        .sown19 {
+            width: 6px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown15 20s ease-out 4.6s infinite;
+        }
+
+        .sown20 {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown16 30s ease-out 4.8s infinite;
+        }
+
+        .sown21 {
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown10 30s ease-in 13s infinite;
+        }
+
+        .sown22 {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown15 30s ease-in 11s infinite;
+        }
+
+        .sown15 {
+            width: 12px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown13 12s ease-in 13.6s infinite;
+        }
+
+        .sown16 {
+            width: 5px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown14 20s ease-in 6.8s infinite;
+        }
+
+        .sown17 {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown15 30s ease-out 4s infinite;
+        }
+
+        .sown18 {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown16 20s ease-in 5s infinite;
+        }
+
+        .sown19 {
+            width: 6px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown5 20s ease-out 13.6s infinite;
+        }
+
+        .sown20 {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown16 23s ease-out 6.8s infinite;
+        }
+
+        .sown21 {
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown10 12s ease-in 7.1s infinite;
+        }
+
+        .sown22 {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgb(252, 250, 250);
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation: sown7 20s ease-in 1.1s infinite;
+        }
+        @keyframes sown1 {
+            0% {
+                top: 20px;
+                left: 0px;
+            }
+
+            20% {
+                top: 300px;
+                left: 100px;
+            }
+
+            50% {
+                top: 400px;
+                left: 150px;
+            }
+
+            75% {
+                top: 500px;
+                left: 130px;
+            }
+
+            100% {
+                top: 620px;
+                left: 0px;
+            }
+        }
+
+        @keyframes sown2 {
+            0% {
+                top: 20px;
+                left: 80px;
+            }
+
+            20% {
+                top: 200px;
+                left: 400px;
+            }
+
+            50% {
+                top: 300px;
+                left: 500px;
+            }
+
+            75% {
+                top: 500px;
+                left: 600px;
+            }
+
+            100% {
+                top: 620px;
+                left: 800px;
+            }
+        }
+
+        @keyframes sown3 {
+            0% {
+                top: 20px;
+                left: 150px;
+            }
+
+            20% {
+                top: 150px;
+                left: 120px;
+            }
+
+            50% {
+                top: 300px;
+                left: 450px;
+            }
+
+            75% {
+                top: 500px;
+                left: 300px;
+            }
+
+            100% {
+                top: 620px;
+                left: 10px;
+            }
+        }
+
+        @keyframes sown4 {
+            0% {
+                top: 20px;
+                left: 780px;
+            }
+
+            20% {
+                top: 100px;
+                left: 620px;
+            }
+
+            50% {
+                top: 330px;
+                left: 550px;
+            }
+
+            75% {
+                top: 500px;
+                left: 480px;
+            }
+
+            100% {
+                top: 620px;
+                left: 800px;
+            }
+        }
+
+        @keyframes sown5 {
+            0% {
+                top: 0px;
+                left: 900px;
+            }
+
+            20% {
+                top: 100px;
+                left: 753px;
+            }
+
+            50% {
+                top: 240px;
+                left: 458px;
+            }
+
+            75% {
+                top: 900px;
+                left: 360px;
+            }
+
+            100% {
+                top: 620px;
+                left: 452px;
+            }
+        }
+
+        @keyframes sown6 {
+            0% {
+                top: -20px;
+                left: 752px;
+            }
+
+            20% {
+                top: 300px;
+                left: 652px;
+            }
+
+            50% {
+                top: 680px;
+                left: 423px;
+            }
+
+            75% {
+                top: 920px;
+                left: 321px;
+            }
+
+            100% {
+                top: 1420px;
+                left: 10px;
+            }
+        }
+
+        @keyframes sown7 {
+            0% {
+                top: -20px;
+                left: 740px;
+            }
+
+            20% {
+                top: 300px;
+                left: 680px;
+            }
+
+            50% {
+                top: 400px;
+                left: 450px;
+            }
+
+            75% {
+                top: 1000px;
+                left: 1000px;
+            }
+
+            100% {
+                top: 620px;
+                left: 1030px;
+            }
+        }
+
+        @keyframes sown8 {
+            0% {
+                top: 20px;
+                left: 490px;
+            }
+
+            20% {
+                top: 300px;
+                left: 620px;
+            }
+
+            50% {
+                top: 400px;
+                left: 550px;
+            }
+
+            75% {
+                top: 500px;
+                left: 1160px;
+            }
+
+            100% {
+                top: 620px;
+                left: 890px;
+            }
+        }
+
+        @keyframes sown9 {
+            0% {
+                top: 20px;
+                left: 0px;
+            }
+
+            20% {
+                top: 300px;
+                left: 100px;
+            }
+
+            50% {
+                top: 400px;
+                left: 150px;
+            }
+
+            75% {
+                top: 500px;
+                left: 130px;
+            }
+
+            100% {
+                top: 920px;
+                left: 0px;
+            }
+        }
+
+        @keyframes sown10 {
+            0% {
+                top: 120px;
+                left: 80px;
+            }
+
+            20% {
+                top: 300px;
+                left: 400px;
+            }
+
+            50% {
+                top: 400px;
+                left: 500px;
+            }
+
+            75% {
+                top: 500px;
+                left: 600px;
+            }
+
+            100% {
+                top: 620px;
+                left: 800px;
+            }
+        }
+
+        @keyframes sown11 {
+            0% {
+                top: 200px;
+                left: 150px;
+            }
+
+            20% {
+                top: 300px;
+                left: 120px;
+            }
+
+            50% {
+                top: 400px;
+                left: 450px;
+            }
+
+            75% {
+                top: 500px;
+                left: 300px;
+            }
+
+            100% {
+                top: 620px;
+                left: 10px;
+            }
+        }
+
+        @keyframes sown12 {
+            0% {
+                top: 200px;
+                left: 1089px;
+            }
+
+            20% {
+                top: 300px;
+                left: 652px;
+            }
+
+            50% {
+                top: 400px;
+                left: 950px;
+            }
+
+            75% {
+                top: 500px;
+                left: 1080px;
+            }
+
+            100% {
+                top: 620px;
+                left: 900px;
+            }
+        }
+
+        @keyframes sown13 {
+            0% {
+                top: 90px;
+                left: 900px;
+            }
+
+            20% {
+                top: 100px;
+                left: 953px;
+            }
+
+            50% {
+                top: 400px;
+                left: 858px;
+            }
+
+            75% {
+                top: 900px;
+                left: 750px;
+            }
+
+            100% {
+                top: 620px;
+                left: 552px;
+            }
+        }
+
+        @keyframes sown14 {
+            0% {
+                top: -20px;
+                left: 1002px;
+            }
+
+            20% {
+                top: 300px;
+                left: 1102px;
+            }
+
+            50% {
+                top: 680px;
+                left: 1023px;
+            }
+
+            75% {
+                top: 820px;
+                left: 852px;
+            }
+
+            100% {
+                top: 1420px;
+                left: 1000px;
+            }
+        }
+
+        @keyframes sown15 {
+            0% {
+                top: -20px;
+                left: 1340px;
+            }
+
+            20% {
+                top: 300px;
+                left: 1080px;
+            }
+
+            50% {
+                top: 400px;
+                left: 1110px;
+            }
+
+            75% {
+                top: 500px;
+                left: 900px;
+            }
+
+            100% {
+                top: 620px;
+                left: 730px;
+            }
+        }
+
+        @keyframes sown16 {
+            0% {
+                top: 20px;
+                left: 1200px;
+            }
+
+            20% {
+                top: 300px;
+                left: 620px;
+            }
+
+            50% {
+                top: 400px;
+                left: 790px;
+            }
+
+            75% {
+                top: 500px;
+                left: 890px;
+            }
+
+            100% {
+                top: 620px;
+                left: 1100px;
+            }
+        }
+
+        /* .sown:hover{
+            margin-top: 5px;
+            margin-left: 6px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="user"> <label>用户名：</label> <input type="text"></div>
+            <div class="password user"> <label>密码 ： </label> <input type="password"></div>
+            <div class="btn">
+                <button class="login">登录</button>
+                <button class="register login">注册</button>
+            </div>
+        </div>
+        <div class="sown1 sown"></div>
+        <div class="sown2 sown"></div>
+        <div class="sown3 sown"></div>
+        <div class="sown4 sown"></div>
+        <div class="sown5 sown"></div>
+        <div class="sown6 sown"></div>
+        <div class="sown7 sown"></div>
+        <div class="sown8 sown"></div>
+        <div class="sown9 sown"></div>
+        <div class="sown10 sown"></div>
+        <div class="sown11 sown"></div>
+        <div class="sown12 sown"></div>
+        <div class="sown13 sown"></div>
+        <div class="sown14 sown"></div>
+        <div class="sown15 sown"></div>
+        <div class="sown16 sown"></div>
+        <div class="sown17 sown"></div>
+        <div class="sown18 sown"></div>
+        <div class="sown18 sown"></div>
+        <div class="sown19 sown"></div>
+        <div class="sown20 sown"></div>
+        <div class="sown21 sown"></div>
+        <div class="sown22 sown"></div>
+        <div class="sown23 sown"></div>
+        <div class="sown24 sown"></div>
+        <div class="sown25 sown"></div>
+        <div class="sown26 sown"></div>
+        <div class="sown27 sown"></div>
+        <div class="sown28 sown"></div>
+        <div class="sown29 sown"></div>
+        <div class="sown30 sown"></div>
+    </div>
+</body>
+
+</html>
